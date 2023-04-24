@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Popular = () => {
+const TopRated = () => {
     return (
         <div className="container">
-            <h1>Popular</h1>
+            <h1>Top Rated</h1>
         </div>
     );
 };
 
-export default Popular;
+export default TopRated;
