@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Popular = () => {
+const Home = () => {
     return (
         <div className="container">
-            <h1>Popular</h1>
+            <h1>Home</h1>
         </div>
     );
 };
 
-export default Popular;
+export default Home;
