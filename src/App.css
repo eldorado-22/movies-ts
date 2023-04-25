@@ -19,3 +19,11 @@ button, input {
     outline: none;
     cursor: pointer;
 }
+
+.popular{
+    display: flex;
+    flex-wrap: wrap;
+}
+img{
+    border-radius: 7px;
+}
