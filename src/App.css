@@ -10,6 +10,7 @@
     margin: 0 auto;
 }
 
+
 a {
     text-decoration: none;
 }
@@ -20,10 +21,38 @@ button, input {
     cursor: pointer;
 }
 
+.header{
+    position: fixed;
+    width: 100%;
+    backdrop-filter: blur(10px);
+
+}
+
 .popular{
     display: flex;
     flex-wrap: wrap;
+    background: transparent;
 }
+
 img{
     border-radius: 7px;
+    object-fit: cover;
+}
+
+.topRated{
+    display: flex;
+    flex-wrap: wrap;
+}
+a::after::before{
+    color: aqua;
+}
+body{
+    background: #131212;
+}
+#topRated, #popular, #nowPlaying{
+    /*background: #07296b;*/
+    padding: 70px 0;
+}
+h1  {
+    color: antiquewhite;
 }
