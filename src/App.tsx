@@ -9,6 +9,7 @@ import NowPlaying from "./pages/NowPlaying/NowPlaying";
 import TopRated from "./pages/TopRated/TopRated";
 
 function App() {
+
     return (
         <div>
             <Header/>

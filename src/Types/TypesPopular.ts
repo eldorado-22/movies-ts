@@ -12,3 +12,4 @@ export interface IPopular {
     "original_language": string
     "original_title": string
 }
+

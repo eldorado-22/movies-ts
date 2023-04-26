@@ -1,4 +1,4 @@
-import {IPopular} from "../Types/Types";
+import {IPopular} from "../Types/TypesPopular";
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 
 interface IPopularSlice {
