@@ -1,7 +1,47 @@
 #home {
   background: url("./../images/home.svg") no-repeat center/cover;
   min-height: 100vh;
-  .home {
+  object-fit: cover;
 
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.44) 0, rgba(0, 0, 0, 0.38) 60%, rgba(0, 0, 0, 0.9) 100%);
+    z-index: -3;
+  }
+
+  h1 {
+    animation: text ease-in-out 3s;
+    //targets: '.staggering-from-demo .el';
+    //translateX: 270;
+    //delay: text.stagger(100, {from: 'center'});
+  }
+
+  @keyframes text {
+    0% {
+      transform: translateX(-1200px);
+    }
+  }
+
+  .home {
+    .btn-group {
+      button {
+        color: white;
+        font-size: 23px;
+        //background: #F1433A;
+        //box-shadow: 0 4px 39px rgba(231, 87, 87, 0.25);
+      }
+
+      animation: btn ease-in 3s;
+      @keyframes btn {
+        0% {
+          transform: translateX(-600px);
+        }
+      }
+    }
   }
 }
