@@ -7,6 +7,7 @@ import Popular from "./pages/Popular/Popular";
 import Home from "./pages/Home";
 import NowPlaying from "./pages/NowPlaying/NowPlaying";
 import TopRated from "./pages/TopRated/TopRated";
+import DetailPages from "./pages/DetailPages/DetailPages";
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
                 <Route path={"/popular"} element={<Popular/>}/>
                 <Route path={"/now-playing"} element={<NowPlaying/>}/>
                 <Route path={"/top-rated"} element={<TopRated/>}/>
+                <Route path={"/detail-pages/:movieId"} element={<DetailPages/>}/>
             </Routes>
             <Footer/>
         </div>

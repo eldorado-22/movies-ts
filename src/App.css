@@ -25,13 +25,18 @@ button, input {
     position: fixed;
     width: 100%;
     backdrop-filter: blur(10px);
-
+    animation: header ease-in-out 2s;
 }
+@keyframes header {
+    0%{
+        transform: translateY(-600px);
+    }
+}
+
 
 .popular{
     display: flex;
     flex-wrap: wrap;
-    background: transparent;
 }
 
 img{
@@ -43,14 +48,15 @@ img{
     display: flex;
     flex-wrap: wrap;
 }
+
 a::after::before{
     color: aqua;
 }
+
 body{
     background: #131212;
 }
 #topRated, #popular, #nowPlaying{
-    /*background: #07296b;*/
     padding: 70px 0;
 }
 h1  {
