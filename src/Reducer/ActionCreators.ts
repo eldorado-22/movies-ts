@@ -4,17 +4,13 @@ import {fetchingTopRated, fetchingTopRatedError, fetchingTopRatedSuccess} from "
 import axios from "axios";
 import {ApiKey} from "../ApiKey/ApiKey";
 import {fetchingNowPlaying, fetchingNowPlayingError, fetchingNowPlayingSuccess} from "./NowPlayingSlice";
-import {
-    fetchingDetailPage,
-    fetchingDetailPageError,
-    fetchingDetailPageSuccess
-} from "./DetailPagesSlice/DetailPagesSlice";
-import {useParams} from "react-router-dom";
-import {createAsyncThunk} from "@reduxjs/toolkit";
+import {fetchingDetailPage, fetchingDetailPageError, fetchingDetailPageSuccess} from "./DetailPagesSlice/DetailPagesSlice";
 import {IDetailPages} from "../Types/DetailMoviesTypes/DetailTypes";
+import {fetchingActor, fetchingActorError, fetchingActorSuccess} from "./DetailPagesSlice/DetailPagesActors/DetailPageActorsSlice";
+import {fetchingTrailers, fetchingTrailersError, fetchingTrailersSuccess} from "./TrailerSlice";
 
 
-////////////////// Popular //////////////////
+////////////////// POPULAR //////////////////
 export const fetchingPopulars = async (dispatch: AppDispatch) => {
     try {
         dispatch(fetchingPopular())
@@ -26,7 +22,7 @@ export const fetchingPopulars = async (dispatch: AppDispatch) => {
 }
 
 
-///////////////////// Top Rated ////////////////////////
+///////////////////// TOP RATED ////////////////////////
 export const fetchingTopRatedS = async (dispatch: AppDispatch) => {
     try {
         dispatch(fetchingTopRated())
@@ -37,7 +33,7 @@ export const fetchingTopRatedS = async (dispatch: AppDispatch) => {
     }
 }
 
-/////////////////// Now Playing ///////////////////
+/////////////////// NOW PLAYING ///////////////////
 export const fetchingNowPlayingS = async (dispatch: AppDispatch) => {
     try {
         dispatch(fetchingNowPlaying())
@@ -48,9 +44,10 @@ export const fetchingNowPlayingS = async (dispatch: AppDispatch) => {
     }
 }
 
-
 ///////////////////////// DETAIL PAGES //////////////////////////////
-export const getDetailPages = (id: any) =>  async (dispatch: AppDispatch)  => {
+
+
+export const getDetailPages = (id: any) => async (dispatch: AppDispatch) => {
     try {
         dispatch(fetchingDetailPage())
         const url = await axios<IDetailPages>(`https://api.themoviedb.org/3/movie/${id}?api_key=${ApiKey}&language=en-US`)
@@ -58,5 +55,35 @@ export const getDetailPages = (id: any) =>  async (dispatch: AppDispatch)  => {
         dispatch(fetchingDetailPageSuccess(data))
     } catch (e: any) {
         fetchingDetailPageError(e.message)
+    }
+}
+
+//////////////////// ACTORS PAGES /////////////////////////////////
+export const getActor = (id:any) => {
+    return async (dispatch: AppDispatch) => {
+        try {
+            dispatch(fetchingActor())
+            const responsive= await axios.get(`https://api.themoviedb.org/3/movie/${id}/credits?api_key=${ApiKey}&language=en-US`)
+            dispatch(fetchingActorSuccess(responsive.data.cast))
+        } catch (e: any) {
+            dispatch(fetchingActorError(e))
+        }
+    }
+}
+
+
+///////////////// TRAILERS ////////////////////
+// https://api.themoviedb.org/3/movie/${id}/videos?api_key=${key}&language=en-US
+
+export const getTrailer = (id:any) => {
+    return async (dispatch: AppDispatch) => {
+        try {
+            dispatch(fetchingTrailers())
+            const responsive= await axios.get(`https://api.themoviedb.org/3/movie/${id}/videos?api_key=${ApiKey}&language=en-US`)
+            dispatch(fetchingTrailersSuccess(responsive.data.results))
+            console.log(responsive)
+        } catch (e: any) {
+            dispatch(fetchingTrailersError(e))
+        }
     }
 }

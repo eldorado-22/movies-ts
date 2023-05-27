@@ -21,44 +21,52 @@ button, input {
     cursor: pointer;
 }
 
-.header{
+img {
+    border-radius: 7px;
+    object-fit: cover;
+}
+
+#header {
+    backdrop-filter: blur(5px);
+    z-index: 99;
+    background: rgba(0, 0, 0, 0.97);
+}
+
+.header {
     position: fixed;
     width: 100%;
     backdrop-filter: blur(10px);
     animation: header ease-in-out 2s;
 }
+
 @keyframes header {
-    0%{
+    0% {
         transform: translateY(-600px);
     }
 }
 
 
-.popular{
+.popular {
     display: flex;
-    flex-wrap: wrap;
 }
 
-img{
-    border-radius: 7px;
-    object-fit: cover;
-}
 
-.topRated{
+.topRated {
     display: flex;
-    flex-wrap: wrap;
 }
 
-a::after::before{
+a::after::before {
     color: aqua;
 }
 
-body{
+body {
     background: #131212;
 }
-#topRated, #popular, #nowPlaying{
+
+#topRated, #popular, #nowPlaying {
     padding: 70px 0;
 }
-h1  {
+
+h1 {
     color: antiquewhite;
 }
