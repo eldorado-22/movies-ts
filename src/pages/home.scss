@@ -1,5 +1,5 @@
 #home {
-  background: url("./../images/home.svg") no-repeat center/cover;
+  background: url("./../images/spider.jpg") no-repeat center/cover;
   min-height: 100vh;
   object-fit: cover;
 
@@ -28,12 +28,19 @@
   }
 
   .home {
+    &--images{
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      position: relative;
+      //top: 90px;
+    }
+
     .btn-group {
       button {
         color: white;
         font-size: 23px;
-        //background: #F1433A;
-        //box-shadow: 0 4px 39px rgba(231, 87, 87, 0.25);
       }
 
       animation: btn ease-in 3s;

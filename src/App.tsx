@@ -14,10 +14,15 @@ import ActorsPages from "./pages/DetailPages/DetailActorsPage/ActorsPage";
 
 
 function App() {
+    // const [dark, setDark] = useState(false)
+    //
+    // function getDark() {
+    //     setDark(!dark)
+    // }
 
     return (
         <div>
-            <Header/>
+            <Header />
             <Routes>
                 <Route path={"/"} element={<Home/>}/>
                 <Route path={"/popular"} element={<Popular/>}/>

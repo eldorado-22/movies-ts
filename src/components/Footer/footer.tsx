@@ -1,12 +1,23 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {NavLink} from "react-router-dom";
 import logo from "./../../images/loho.svg"
 
 
 const Footer = () => {
-    return (
-        <footer id="footer">
+    const [scroll, setScroll] = useState(0)
 
+    const toScroll = () => {
+        setScroll(window.scrollY)
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', toScroll)
+    }, [])
+
+    return (
+        <footer style={{
+            background: scroll > 50 ? '#3f2500' : '',
+        }} id="footer">
             <footer className="">
                 <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
                     <div className="md:flex md:justify-between">
@@ -14,10 +25,6 @@ const Footer = () => {
                             <a href="#" className="flex items-center">
                                 <img src={logo}  className="h-8 mr-3"
                                      alt="FlowBite Logo"/>
-                                {/*<span*/}
-                                {/*    className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">*/}
-                                {/*    Movies*/}
-                                {/*</span>*/}
                             </a>
                         </div>
                         <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
