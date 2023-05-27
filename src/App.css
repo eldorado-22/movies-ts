@@ -44,7 +44,12 @@ img {
         transform: translateY(-600px);
     }
 }
-
+.header--signIn{
+    background: rgb(3, 72, 59);
+    position: absolute;
+    top: 130%;
+    left: 30%;
+}
 
 .popular {
     display: flex;
