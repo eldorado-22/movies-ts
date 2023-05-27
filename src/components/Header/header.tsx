@@ -27,14 +27,10 @@ const Header = () => {
                         {/*</span>*/}
                     </NavLink>
                     <div className="flex md:order-2">
-                        <button type="button"
-                                className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                        <button type="button" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                             Sign In
                         </button>
-                        <button type="button"
-                                className="mx-4 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-red-800 dark:hover:bg-red-700 dark:focus:ring-white">
-                            Dark
-                        </button>
+                        <button type="button" className="mx-4 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-red-800 dark:hover:bg-red-700 dark:focus:ring-white">Dark</button>
                     </div>
 
                     <ul className="flex flex-col font-medium p-4 md:p-0 mt-4   md:flex-row md:space-x-8 md:mt-0">
@@ -57,8 +53,6 @@ const Header = () => {
                     </ul>
                 </div>
             </div>
-
-
         </header>
     );
 };

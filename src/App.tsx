@@ -8,6 +8,10 @@ import Home from "./pages/Home";
 import NowPlaying from "./pages/NowPlaying/NowPlaying";
 import TopRated from "./pages/TopRated/TopRated";
 import DetailPages from "./pages/DetailPages/DetailPages";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import ActorsPages from "./pages/DetailPages/DetailActorsPage/ActorsPage";
+
 
 function App() {
 
