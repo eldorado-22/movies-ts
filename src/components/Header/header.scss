@@ -1,0 +1,41 @@
+#header {
+  .header {
+    &--signIn {
+      background: rgb(56, 20, 1);
+      position: absolute;
+      top: 130%;
+      left: 30%;
+
+      &__esc {
+        display: flex;
+        align-items: center;
+
+        button {
+          font-size: 40px;
+          color: #FFFFFF;
+          padding: 0 46px;
+        }
+
+      }
+    }
+
+    &--btnOne {
+      padding: 10px 20px;
+      border: 2px solid #BCD0E5;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 16px;
+      transition: .6s;
+      box-shadow: 2px 2px 10px 1px #02897A;
+      background: #02897A;
+      color: white;
+
+      &:hover {
+        border: 2px solid red;
+        background: red;
+        outline: none;
+      }
+    }
+
+  }
+}
