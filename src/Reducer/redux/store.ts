@@ -12,7 +12,8 @@ const rootReducer = combineReducers({
     NowPlayingSlice,
     DetailPagesSlice,
     actorsSlice,
-    fetchTrailers
+    fetchTrailers,
+
 })
 
 export const setupStore = () => {

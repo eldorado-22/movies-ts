@@ -3,21 +3,21 @@ import {NavLink} from "react-router-dom";
 import logo from "./../../images/loho.svg"
 
 const Header = () => {
-    // const [scroll, setScroll] = useState(0)
-    //
-    // const toScroll = () => {
-    //     setScroll(window.scrollY)
-    // }
+    const [scroll, setScroll] = useState(0)
 
-    // useEffect(() => {
-    //     window.addEventListener('scroll', toScroll)
-    // }, [])
-    // style={{
-    //     background: scroll > 50 ? '#fff' : '',
-    //         backdropFilter: "blur(10px)"
-    // }}
+    const toScroll = () => {
+        setScroll(window.scrollY)
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', toScroll)
+    }, [])
+
     return (
-        <header  id="header" className="header" >
+        <header  style={{
+            background: scroll > 50 ? '#3f2500' : '',
+            backdropFilter: "blur(10px)"
+        }} id="header" className="header" >
             <div className="header">
                 <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                     <NavLink to="/"  className="flex items-center">
