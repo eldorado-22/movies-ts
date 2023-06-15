@@ -5,6 +5,7 @@ import NowPlayingSlice from "../NowPlayingSlice";
 import DetailPagesSlice from "./../DetailPagesSlice/DetailPagesSlice"
 import actorsSlice from "../DetailPagesSlice/DetailPagesActors/DetailPageActorsSlice";
 import fetchTrailers from "../TrailerSlice";
+import ActorsInfoSlice from "../DetailPagesSlice/Actors-Info-Movies/ActorsMoviesSlice";
 
 const rootReducer = combineReducers({
     popularSlice,
@@ -13,7 +14,7 @@ const rootReducer = combineReducers({
     DetailPagesSlice,
     actorsSlice,
     fetchTrailers,
-
+    ActorsInfoSlice,
 })
 
 export const setupStore = () => {

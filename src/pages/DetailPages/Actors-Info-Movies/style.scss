@@ -1,0 +1,77 @@
+#info {
+  .info {
+    gap: 40px;
+    padding: 40px 0;
+    h1 {
+      font-weight: 600;
+      font-size: 50px;
+    }
+
+    h6 {
+      font-weight: 550;
+      font-size: 40px;
+      color: #b70101;
+    }
+
+    .social {
+      padding: 20px 0;
+      //instagram
+      .instagram {
+        animation: instagram ease-in-out 6s;
+      }
+
+      @keyframes instagram {
+        0% {
+          transform: translateY(-600px);
+        }
+      }
+
+      //tiktok
+      .tiktok {
+        animation: tiktok ease-in 6s;
+        color: #aba8a8;
+      }
+
+      @keyframes tiktok {
+        0% {
+          transform: translateY(600px);
+        }
+      }
+
+      //linkedin
+      .linkedin {
+        animation: linkedin ease-in 6s;
+      }
+
+      @keyframes linkedin {
+        0% {
+          transform: translateY(-600px);
+        }
+      }
+
+      //youtube
+      .youtube {
+        animation: youtube ease-in 6s;
+      }
+
+      @keyframes youtube {
+        0% {
+          transform: translateY(600px);
+        }
+      }
+
+      //facebook
+      .facebook {
+        animation: facebook ease-in 6s;
+      }
+
+      @keyframes facebook {
+        0% {
+          transform: translateY(-600px);
+        }
+      }
+
+
+    }
+  }
+}

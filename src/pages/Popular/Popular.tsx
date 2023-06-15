@@ -28,7 +28,7 @@ const Popular = () => {
     return (
         <div style={{
             background: scroll > 50 ? '#b22222' : '',
-            color: scroll > 50 ? '#000000' : ''
+            color: scroll > 50 ? '#000000' : '',
         }} id="popular">
             <div  className="container">
                 <div className=" flex pl-10  ">

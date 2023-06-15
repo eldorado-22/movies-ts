@@ -37,7 +37,7 @@ const ActorsPage = () => {
                                 <div key={el.id} className="actors--img py-10">
 
                                     <div className="actors--img__group">
-                                        <Link to={`/actor-info/${el.id}`}>
+                                        <Link to={`/actors-info/${el.id}`}>
                                             {!el.profile_path ? <img src={user} alt="img" width="210px"/>
                                                 :
                                                 <img src={`https://image.tmdb.org/t/p/w138_and_h175_face${el.profile_path}`}
