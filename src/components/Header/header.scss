@@ -5,15 +5,29 @@
       position: absolute;
       top: 130%;
       left: 30%;
+      animation: signIn ease-in-out 4s;
+      transition: .5s;
+      @keyframes signIn {
+        0% {
+          transform: scale(0.1);
+        }
+        50%{
+          transform: translate(300px);
+          transition: .5s;
+
+        }
+      }
 
       &__esc {
         display: flex;
         align-items: center;
 
+
         button {
           font-size: 40px;
           color: #FFFFFF;
           padding: 0 46px;
+
         }
 
       }

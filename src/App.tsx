@@ -11,24 +11,28 @@ import DetailPages from "./pages/DetailPages/DetailPages";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ActorsPages from "./pages/DetailPages/DetailActorsPage/ActorsPage";
+import {useAppSelector} from "./hooks/useAppSelector";
+import ActorsInfo from "./pages/DetailPages/Actors-Info-Movies/ActorsInfo";
 
 
 function App() {
-    // const [dark, setDark] = useState(false)
+
+    const [dark, setDark] = useState(false)
     //
-    // function getDark() {
-    //     setDark(!dark)
-    // }
+    function getDark() {
+        setDark(!dark)
+    }
 
     return (
         <div>
-            <Header />
+            <Header/>
             <Routes>
                 <Route path={"/"} element={<Home/>}/>
                 <Route path={"/popular"} element={<Popular/>}/>
                 <Route path={"/now-playing"} element={<NowPlaying/>}/>
                 <Route path={"/top-rated"} element={<TopRated/>}/>
                 <Route path={"/detail-pages/:movieId"} element={<DetailPages/>}/>
+                <Route path={"/actors-info/:actorId"} element={<ActorsInfo/>}/>
             </Routes>
             <Footer/>
         </div>

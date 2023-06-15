@@ -3,6 +3,12 @@ import {NavLink} from "react-router-dom";
 import logo from "./../../images/loho.svg"
 import "./header.scss";
 
+// interface IProps{
+//     getDark: any,
+//     dark: any
+// }
+
+
 const Header = () => {
     const [scroll, setScroll] = useState(0)
     const [signIn, setSignIn] = useState(false)
@@ -16,13 +22,13 @@ const Header = () => {
     }, [])
 
     return (
-        <header  style={{
+        <header style={{
             background: scroll > 50 ? '#3f2500' : '',
             backdropFilter: "blur(10px)"
-        }} id="header" className="header" >
+        }} id="header" className="header">
             <div className="header">
                 <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-                    <NavLink to="/"  className="flex items-center">
+                    <NavLink to="/" className="flex items-center">
                         <img src={logo} className="h-8 mr-3" alt="Flowbite Logo"/>
                         {/*<span*/}
                         {/*    className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Movies TV*/}
@@ -30,16 +36,16 @@ const Header = () => {
                     </NavLink>
 
                     <div className="flex md:order-2">
-                        <div style={{display: signIn  === true ? "block" : "none"}}
+                        <div style={{display: signIn === true ? "block" : "none"}}
                              className="header--signIn w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
-                            <form className="space-y-6 "  action="#">
+                            <form className="space-y-6 " action="#">
                                 <div className="header--signIn__esc ">
                                     <h5 className="text-xl font-medium text-gray-900 dark:text-white">
                                         Sign in to our platform
                                     </h5>
-                                    <button className="" onClick={() => setSignIn(false)}>&times;</button>
+                                    <button className="esc" onClick={() => setSignIn(false)}>&times;</button>
                                 </div>
-                                <div >
+                                <div>
                                     <label htmlFor="email"
                                            className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                                         Your email
@@ -88,11 +94,14 @@ const Header = () => {
                                 </div>
                             </form>
                         </div>
-                        <button  onClick={() => setSignIn(true)} className="header--btnOne">Sign In</button>
+                        <button onClick={() => setSignIn(true)} className="header--btnOne">Sign In</button>
 
-                        <button type="button" className="mx-4 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-red-800 dark:hover:bg-red-700 dark:focus:ring-white">
+                        <button type="button"
+                                className="mx-4 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-red-800 dark:hover:bg-red-700 dark:focus:ring-white">
                             Dark
                         </button>
+
+
                     </div>
 
                     <ul className="flex flex-col font-medium p-4 md:p-0 mt-4   md:flex-row md:space-x-8 md:mt-0">
