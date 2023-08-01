@@ -9,5 +9,4 @@
 <br/>
 
 <h1> I'm Front-End developer 👨🏻‍💻✨</h1>
-<br/>
 <h1> See other projects..🗂️ https://www.github.com/eldorado-22/ </br>
