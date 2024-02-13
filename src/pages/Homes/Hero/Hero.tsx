@@ -1,9 +1,9 @@
 import React from 'react';
 import "./home.scss";
 import {MdSavedSearch} from "react-icons/md";
-import home from "./../images/home.svg"
+import home from "../../../images/home.svg"
 
-const Home = () => {
+const Hero = () => {
     return (
         <section id="home">
             <div className="container">
@@ -35,4 +35,4 @@ const Home = () => {
     );
 };
 
-export default Home;
+export default Hero;
