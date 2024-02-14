@@ -8,10 +8,14 @@ import "./header.scss";
 //     dark: any
 // }
 
+//// JAVASCRIPT
+
+
 
 const Header = () => {
     const [scroll, setScroll] = useState(0)
     const [signIn, setSignIn] = useState(false)
+    // const [signIn, setSignIn] = useState(false)
 
     const toScroll = () => {
         setScroll(window.scrollY)
